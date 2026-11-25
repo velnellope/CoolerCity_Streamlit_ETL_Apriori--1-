@@ -33,7 +33,6 @@ def auth_screen():
             <li>Analisis tren, jam ramai, kanal, dan kategori</li>
             <li>Market basket analysis &amp; rekomendasi bundling</li>
           </ul>
-          <p style="margin-top:26px;font-size:.8rem;color:#7C8FA6">Data simulasi · untuk keperluan penelitian</p>
         </div>""", unsafe_allow_html=True)
     with right:
         ready = data.db_ready()
@@ -136,6 +135,5 @@ with st.sidebar:
         st.session_state.clear()
         st.rerun()
     st.caption(f"SQL Server: {os.getenv('SQL_SERVER', 'localhost')} / {os.getenv('SQL_DATABASE', 'dw_coolercity')}")
-    st.caption("Data simulasi · dashboard penelitian")
 
 nav.run()
